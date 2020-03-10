@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogflow</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <div class="chatbot">
+        <input type="checkbox" class="chatbot__checkbox" id="chatbot-toggle">
+        <label for="chatbot-toggle" class="chatbot__button"></label>
+
+        <div class="chatbot__chat">
+            <div class="chatbot__chat--top">
+                <label for="chatbot-toggle" class="chatbot__button--close">
+                    <span class="chatbot__icon">&nbsp;</span>
+                </label>
+            </div>
+
+            <div class="chatbot__list--container">
+                <ul class="chatbot__list">
+                    <li class="chatbot__item chatbot__item--client">Hey! How can I help you?</li>
+                </ul>
+            </div>
+
+            <div class="chatbot__form">
+                <form method="POST">
+                    <input type="text" name="input" class="chatbot__form--input" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" class="chatbot__form--submit">&nbsp;</button>
+                </form>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

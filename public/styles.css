@@ -1,0 +1,188 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+}
+
+.chatbot__checkbox {
+    display: none; }
+  
+  .chatbot__button {
+    background-color: #5c5da6;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    cursor: pointer;
+    text-align: center;
+    background-image: url(./img/comment.svg);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    background-position: center; }
+  
+  .chatbot__button--close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    cursor: pointer; }
+  
+  .chatbot__chat {
+    position: relative;
+    height: 0;
+    background-color: white;
+    position: fixed;
+    bottom: 6rem;
+    right: 6rem;
+    z-index: 2500;
+    width: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in; }
+    .chatbot__chat--top {
+      position: sticky;
+      height: 10%;
+      background-color: #082740;
+      top: 0; }
+  
+  .chatbot__list {
+    list-style: none;
+    padding: 1rem;
+    margin-top: 2rem; }
+  
+  .chatbot__list--container {
+    overflow: auto;
+    height: 75%; }
+  
+  .chatbot__item {
+    padding: 0.5rem 2rem;
+    padding-left: 1rem;
+    margin-bottom: 2.5rem;
+    max-width: 75%;
+    display: inline-block;
+    clear: both; }
+  
+  .chatbot__item--client {
+    float: left;
+    background-color: #f2f2f2;
+    border-radius: 1.5rem 1.5rem 1.5rem 0; }
+  
+  .chatbot__item--user {
+    float: right;
+    background-color: #5c5da6;
+    color: white;
+    border-radius: 1.5rem 1.5rem 0; }
+  
+  .chatbot__checkbox:checked ~ .chatbot__chat {
+    opacity: 1;
+    width: 35rem;
+    height: 45rem; }
+  
+  .chatbot__icon {
+    position: absolute;
+    top: 1rem;
+    right: 2rem; }
+    .chatbot__icon::before, .chatbot__icon::after {
+      width: 2rem;
+      height: 2px;
+      background-color: white;
+      display: inline-block;
+      transition: all 0.2s; }
+    .chatbot__icon::before, .chatbot__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .chatbot__icon::before {
+      transform: rotate(135deg); }
+    .chatbot__icon::after {
+      transform: rotate(-135deg); }
+  
+  .chatbot__form {
+    padding: 1rem;
+    height: 15%;
+    border-top: 1px solid #bbbbbb; }
+    .chatbot__form--input {
+      width: 80%;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      border: 1px solid #575757; }
+      .chatbot__form--input::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        font-size: 1.5rem; }
+      .chatbot__form--input::-moz-placeholder {
+        /* Firefox 19+ */
+        font-size: 1.5rem; }
+      .chatbot__form--input:-ms-input-placeholder {
+        /* IE 10+ */
+        font-size: 1.5rem; }
+      .chatbot__form--input *:-moz-placeholder {
+        /* Firefox 18- */
+        font-size: 1.5rem; }
+    .chatbot__form--submit {
+      width: 15%;
+      height: 4.5rem;
+      background-image: url(./img/send.svg);
+      background-size: 3.5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      border: none;
+      margin-left: 1rem; }
+    .chatbot__form--input:focus, .chatbot__form--input:active {
+      outline: none;
+      border: 1px solid #289da1; }
+    .chatbot__form--submit:focus, .chatbot__form--submit:active {
+      outline: none; }
+  
+  @media (max-width: 37.5em) {
+    .chatbot__checkbox:checked ~ .chatbot__chat {
+      width: 100vw;
+      height: 100vh;
+      bottom: 0;
+      right: 0; }
+    .chatbot__chat--top {
+      height: 5%; }
+    .chatbot__list--container {
+      font-size: 2rem;
+      height: 87%; }
+    .chatbot__form {
+      height: 13%; } }
+  
